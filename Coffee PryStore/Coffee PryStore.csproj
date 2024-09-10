@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -53,6 +56,24 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -67,7 +88,43 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Attributes\Images\cloudfone.png" />
+    <Content Include="Attributes\Images\cupwittclouds.png" />
+    <Content Include="Attributes\Images\cutecup.png" />
+    <Content Include="Attributes\Images\designdrinks.png" />
+    <Content Include="Attributes\Images\girlcoffee.png" />
+    <Content Include="Attributes\Images\lotsmallcoffee.png" />
+    <Content Include="Attributes\Images\menu.png" />
+    <Content Include="Attributes\Images\onlycoffee.png" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-grid.css" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-grid.min.css" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-grid.rtl.css" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-reboot.css" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-reboot.min.css" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-utilities.css" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-utilities.min.css" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap.css" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap.min.css" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap.rtl.css" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap.rtl.min.css" />
+    <Content Include="Attributes\Libraries\Boost\js\bootstrap.bundle.js" />
+    <Content Include="Attributes\Libraries\Boost\js\bootstrap.bundle.min.js" />
+    <Content Include="Attributes\Libraries\Boost\js\bootstrap.esm.js" />
+    <Content Include="Attributes\Libraries\Boost\js\bootstrap.esm.min.js" />
+    <Content Include="Attributes\Libraries\Boost\js\bootstrap.js" />
+    <Content Include="Attributes\Libraries\Boost\js\bootstrap.min.js" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Admin\Coffee.aspx" />
+    <Content Include="Views\Admin\Kinds.aspx" />
+    <Content Include="Views\Admin\Management.aspx" />
+    <Content Include="Views\Admin\Users.aspx" />
+    <Content Include="Views\PersonRegistration.aspx" />
+    <Content Include="Views\User\LookigFor.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -75,9 +132,87 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Admin\AdminSettings.Master.cs">
+      <DependentUpon>AdminSettings.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\AdminSettings.Master.designer.cs">
+      <DependentUpon>AdminSettings.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Coffee.aspx.cs">
+      <DependentUpon>Coffee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Coffee.aspx.designer.cs">
+      <DependentUpon>Coffee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Kinds.aspx.cs">
+      <DependentUpon>Kinds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Kinds.aspx.designer.cs">
+      <DependentUpon>Kinds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Management.aspx.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Management.aspx.designer.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PersonRegistration.aspx.cs">
+      <DependentUpon>PersonRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PersonRegistration.aspx.designer.cs">
+      <DependentUpon>PersonRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\LookigFor.aspx.cs">
+      <DependentUpon>LookigFor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\User\LookigFor.aspx.designer.cs">
+      <DependentUpon>LookigFor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\UserSettings.Master.cs">
+      <DependentUpon>UserSettings.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\UserSettings.Master.designer.cs">
+      <DependentUpon>UserSettings.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-grid.css.map" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-grid.min.css.map" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-reboot.css.map" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-utilities.css.map" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap.css.map" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap.min.css.map" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap.rtl.css.map" />
+    <Content Include="Attributes\Libraries\Boost\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Attributes\Libraries\Boost\js\bootstrap.bundle.js.map" />
+    <Content Include="Attributes\Libraries\Boost\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Attributes\Libraries\Boost\js\bootstrap.esm.js.map" />
+    <Content Include="Attributes\Libraries\Boost\js\bootstrap.esm.min.js.map" />
+    <Content Include="Attributes\Libraries\Boost\js\bootstrap.js.map" />
+    <Content Include="Attributes\Libraries\Boost\js\bootstrap.min.js.map" />
     <None Include="packages.config" />
+    <Content Include="Views\Admin\AdminSettings.Master" />
+    <Content Include="Views\User\UserSettings.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -87,7 +222,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Attributes\Front\" />
     <Folder Include="Models\" />
+    <Folder Include="TypeofCoffee\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
