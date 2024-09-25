@@ -134,6 +134,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Admin\AdminSettings.Master.cs">
       <DependentUpon>AdminSettings.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Admin\AdminSettings.Master.designer.cs">
       <DependentUpon>AdminSettings.Master</DependentUpon>
@@ -182,6 +183,7 @@
     </Compile>
     <Compile Include="Views\User\UserSettings.Master.cs">
       <DependentUpon>UserSettings.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\User\UserSettings.Master.designer.cs">
       <DependentUpon>UserSettings.Master</DependentUpon>
